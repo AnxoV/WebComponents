@@ -1,10 +1,28 @@
 addEventListener("DOMContentLoaded", function() {
     const actions = {
-        "show": function(element) {
+        "show": function() {
+            const element = document.getElementById(
+                this.getAttribute("element")
+            );
             element.removeAttribute("hidden");
         },
-        "hide": function(element) {
+        "hide": function() {
+            const element = document.getElementById(
+                this.getAttribute("element")
+            );
             element.setAttribute("hidden", "");
+        },
+        "alert": function() {
+            const type  = this.getAttribute("type");
+            const value = this.getAttribute("value");
+
+            const alert = Alert({
+                type: type,
+                value: value
+            });
+
+            document.querySelector("body")
+                .appendChild(alert.element);
         }
     };
 
@@ -15,11 +33,8 @@ addEventListener("DOMContentLoaded", function() {
 
         button.addEventListener("click", function() {
             const action  = button.getAttribute("action");
-            const element = document.getElementById(
-                button.getAttribute("element")
-            );
 
-            actions[action](element);
+            actions[action].apply(button);
         });
     }
 });

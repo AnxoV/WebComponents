@@ -11,7 +11,7 @@ pop-up {
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
 
     padding: var(--padding);
 
@@ -21,4 +21,8 @@ pop-up {
     background-color: var(--background-color);
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
+}
+
+pop-up > container {
+    margin: .5em 0;
 }

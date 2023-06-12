@@ -8,16 +8,35 @@
     <title>Web Components</title>
 </head>
 <body>
+    <alert
+        type="danger"
+    >
+        <container>
+            Test alert
+        </container>
+        <button action="remove" element="parent">Close</button>
+    </alert>
+
     <main>
-        <button action="show" element="my-pop-up">Click me!</button>
+        <section>
+            <h1>Pop ups</h1>
+            <button action="show" element="my-pop-up">Click me!</button>
+
+            <pop-up id="my-pop-up" hidden>
+                <h1>Hello</h1>
+                <container>
+                    Content
+                </container>
+                <button action="hide" element="my-pop-up">Close</button>
+            </pop-up>
+        </section>
+
+        <section>
+            <h1>Alerts</h1>
+
+            <button action="alert" type="danger" value="Custom alert">Click me!</button>
+        </section>
         
-        <pop-up id="my-pop-up" hidden>
-            <h1>Hello</h1>
-            <container>
-                Content
-            </container>
-            <button action="hide" element="my-pop-up">Close</button>
-        </pop-up>
     </main>
     
     <script src="js/components/button.js"></script>
