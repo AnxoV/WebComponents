@@ -1,0 +1,23 @@
+button {
+    --padding: 0.25em 0.5em;
+
+    --cursor: pointer;
+    
+    --border: none;
+    --border-radius: 0.25em;
+    
+    --color: white;
+    --background-color: rgb(0, 123, 255);
+
+    padding: var(--padding);
+
+    width: fit-content;
+
+    cursor: var(--cursor);
+
+    border: var(--border);
+    border-radius: var(--border-radius);
+
+    color: var(--color);
+    background-color: var(--background-color);
+}

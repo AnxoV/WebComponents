@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/components/button.css">
+    <link rel="stylesheet" href="css/components/pop-up.css">
+    <title>Web Components</title>
+</head>
+<body>
+    <main>
+        <button action="show" element="my-pop-up">Click me!</button>
+        
+        <pop-up id="my-pop-up" hidden>
+            <h1>Hello</h1>
+            <container>
+                Content
+            </container>
+            <button action="hide" element="my-pop-up">Close</button>
+        </pop-up>
+    </main>
+    
+    <script src="js/components/button.js"></script>
+    <script src="js/components/pop-up.js"></script>
+</body>
+</html>
